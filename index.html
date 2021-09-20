@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game Project</title>
+<!--css styling-->
+<style>
+    h1,select,button,div {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1{
+        margin: auto;
+        text-align: center;
+        width: 30%;
+        background-color: black;
+        color: white;
+    }
+    div {
+        background-color: rgb(223, 223, 223);
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 30%;
+        margin: auto;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Main Menu</h1>
+    <!-- div container for form -->
+    <div>
+        <!-- form redirect -->
+        <form action="https://jxdoyle.github.io/game.html" method="GET" target="_blank">
+
+        <!-- username input -->
+        <input type="text" name="username" placeholder="Enter Username"><br>
+
+        <!-- game options -->
+        <p>Game Color
+        <select name="game_color">​
+            <option value="blue">Blue</option>​
+            <option value="pink">Pink</option>​
+            <option value="green">Green</option>
+            <option value="red">Red</option>​
+        </select>
+        </p>
+        <p>Night Mode<input type="checkbox" name="night_mode"></p><br>
+
+        <!-- reset and submit buttons -->
+        <button type="reset">Reset</button>
+        <button type="submit">Run Game</button>
+        </form>
+    </div>
+</body>
+</html>

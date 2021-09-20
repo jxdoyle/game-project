@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Link to css stylesheet-->
+        <link rel="stylesheet" href="game.css">
+        <!-- Link to js script -->
+        <script src="game.js"></script>
+    </head>
+
+    <!-- On page load body calls starGame function-->
+    <body onload="startGame()">
+        <!-- Div container for progress bar-->
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <!-- Div container for buttons outside of canvas -->
+        <div id="main">
+            <!-- Aside for the radio color selection -->
+            <aside id="radioColor" onclick="getColor()"> 
+                <label class="container">Blue
+                    <input type="radio" id="blue" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Pink
+                    <input type="radio" id="pink" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Green
+                    <input type="radio" id="green" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Red
+                    <input type="radio" id="red" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            </aside>
+
+            <!-- Toggle button for night mode -->
+            <input type="checkbox" id="myCheck" onclick="darkMode()">
+            
+            <!-- Buttons & related functions - unicode used for directions -->
+            <button onmousedown="moveup(), clickSound.play()" onmouseup="clearmove()" ontouchstart="moveup()" ontouchend="clearmove()">🠉</button><br><br>
+            <button onmousedown="moveleft(), clickSound.play()" onmouseup="clearmove()" ontouchstart="moveleft()" ontouchend="clearmove()">🠈</button>
+            <button onmousedown="moveright(), clickSound.play()" onmouseup="clearmove()" ontouchstart="moveright()" ontouchend="clearmove()">🠊</button><br><br>
+            <button onmousedown="movedown(), clickSound.play()" onmouseup="clearmove()" ontouchstart="movedown()" ontouchend="clearmove()">🠋</button>
+        </div>
+    </body>
+</html>      
